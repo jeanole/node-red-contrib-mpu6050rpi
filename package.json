@@ -8,8 +8,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeanole/node-red-contrib-mpu6050rpi"
+  },
   "author": "jeanole",
-  "license": "ISC",
+  "license": "MIT",
+  "homepage": "https://github.com/jeanole/node-red-contrib-mpu6050rpi",
   "node-red": {
     "nodes": {
       "mpu6050rpi": "mpu6050rpi.js"

@@ -3,8 +3,15 @@
         category: 'function',
         color: '#a6bbcf',
         defaults: {
-            name: {value:""}
-        },
+            name: {value:""},
+            bus:  {
+                value: '1',
+                required: true
+            },
+            address:  {
+                value: '0x68',
+                required: true
+        }},
         inputs:1,
         outputs:1,
         icon: "file.png",
@@ -19,8 +26,22 @@
         <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
         <input type="text" id="node-input-name" placeholder="Name">
     </div>
+    <div class="form-row">
+        <label for="node-input-bus"><i class="fa fa-map-bus"></i> Bus</label>
+        <select type="text" id="node-input-bus">
+            <option value="1" selected="selected">1</option>
+            <option value="0">0</option>
+        </select>
+    </div>
+    <div class="form-row">
+        <label for="node-input-address"><i class="fa fa-exchange"></i> Address</label>
+        <select type="text" id="node-input-address">
+            <option value="0x68" selected="selected">0x68</option>
+            <option value="0x00">--</option>
+        </select>
+    </div>
 </script>
 
 <script type="text/html" data-help-name="mpu6050rpi">
-    <p>A simple node that converts the message payloads into all lower-case characters</p>
+    <p>A node to read i2c data from mpu6050</p>
 </script>

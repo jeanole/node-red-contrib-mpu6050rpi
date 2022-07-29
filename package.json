@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "i2c-bus": "5.2.2"
+  },
+  "name": "red-contrib-mpu6050rpi",
+  "version": "1.0.0",
+  "main": "mpu6050.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "node-red": {
+    "nodes": {
+      "mpu6050rpi": "mpu6050rpi.js"
+    }
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {},
+  "description": ""
+}

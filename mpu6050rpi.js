@@ -16,9 +16,12 @@ module.exports = function(RED) {
 
     function mpu6050rpi(config) {
         RED.nodes.createNode(this,config);
+
+        this.address = config.address;//config.address;
         var address = 0x68;
-        var i2c1 = i2c.openSync(1);
-        this.sensor =new MPU6050(i2c1, address);
+        this.bus = config.bus; //config.bus;
+        var i2c1 = i2c.openSync(parseInt(this.bus));
+        this.sensor =new MPU6050(i2c1, parseInt(this.address,16));
         var node = this;
 
         node.on('input', function(msg) {
